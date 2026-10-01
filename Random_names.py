@@ -13,3 +13,4 @@ lastn = names.get_last_name()
 firstn = names.get_first_name()
 
 print("\n", lastn, firstn)
+print("\n", "Hello Friend")
