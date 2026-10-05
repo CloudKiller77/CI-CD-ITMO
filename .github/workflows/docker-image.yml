@@ -7,7 +7,7 @@ on:
 jobs:
   build-develop:
     if: github.ref == 'refs/heads/develop'
-    uses: .github/workflows/_build-template.yml
+    uses: ./.github/workflows/_build-template.yml
     with:
       branch: develop
       push_latest: false
@@ -15,7 +15,7 @@ jobs:
 
   build-main:
     if: github.ref == 'refs/heads/main'
-    uses: .github/workflows/_build-template.yml
+    uses: ./.github/workflows/_build-template.yml
     with:
       branch: main
       push_latest: true
