@@ -24,14 +24,14 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: $DOCKER_LOGIN
-          password: $DOCKER_PASS
+          username: ${{ secrets.DOCKER_LOGIN }}
+          password: ${{ secrets.DOCKER_PASS }}
 
       - name: Prepare tags
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: $DOCKER_LOGIN/random-names
+          images: ${{ secrets.DOCKER_LOGIN }}/random-names
           tags: |
             type=raw,value=${{ inputs.branch }}-${{ github.sha }}
             type=raw,value=latest,enable=${{ inputs.push_latest }}
