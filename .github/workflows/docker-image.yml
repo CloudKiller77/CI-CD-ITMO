@@ -15,7 +15,7 @@ jobs:
 
   build-main:
     if: github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/_build-template.yml
+    uses: .github/workflows/_build-template.yml
     with:
       branch: main
       push_latest: true
